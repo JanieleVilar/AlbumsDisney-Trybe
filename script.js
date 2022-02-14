@@ -143,15 +143,15 @@ const validaGames = async (personagem) => {
 const criaInformacoes = async (personagem) => {
   const personagemCards = document.querySelector('.personagensCard');
   const section = document.createElement('section');
-  section.className = 'informacoes container border shadow col-8';
+  section.className = 'informacoes';
   
   const titulo = document.createElement('h5');
-  titulo.className = 'informacoes-title col-8';
+  titulo.className = 'informacoes-title';
   titulo.id = 'titulo'
   titulo.innerHTML = 'Informações';
   
   const paragraph = document.createElement('p');
-  paragraph.className = 'informacoes-texto col-8'
+  paragraph.className = 'informacoes-texto'
   paragraph.innerHTML = `Olá mundo, eu sou ${personagem.name}!`;
   section.appendChild(titulo);
   section.appendChild(paragraph);
@@ -175,7 +175,7 @@ const renderPersonagens = async (personagem) => {
   const personagemNumero = personagemAleatorio(0, 49);
   
   const section = document.createElement('section');
-  section.className = 'personagem col container border shadow';
+  section.className = 'personagem col';
   section.id = personagem[personagemNumero].name;
   
   const paragraph = document.createElement('h5');
@@ -183,7 +183,7 @@ const renderPersonagens = async (personagem) => {
   paragraph.innerHTML = personagem[personagemNumero].name;
   
   const img = document.createElement('img');
-  img.className = 'personagem-image rounded col';
+  img.className = 'personagem-image col';
   img.src = personagem[personagemNumero].imageUrl;
   
   section.appendChild(paragraph);
